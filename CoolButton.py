@@ -13,10 +13,6 @@ class CoolButton():
         self.img = Image.open(imagePath)
         self.img = self.img.resize((width, height))
         self.img=ImageTk.PhotoImage(self.img)
-        # self.img = PhotoImage(file=imagePath)
-        # self.img = self.img.resize((50, 50))
-
-        # self.img = self.img.subsample(20,20) # set image width and height
 
         self.btn = Button(root, image = self.img, width = width, height = height)
         self.btn.bind('<Button-1>', self.left_click_actions ) # Left Click
